@@ -81,10 +81,11 @@ class TwitterFile:
         else:
             verification_and_password()
 
-    def internet_speed_complaint(self, speed: tuple, promised_down_speed, promised_up_speed, tweet=""):
-        """if tweet not provided, by default message will be used. down_speed: download speed, up_speed: upload speed"""
+    def internet_speed_complaint(self, current_speed: tuple, promised_down_speed, promised_up_speed, tweet=""):
+        """if tweet not provided, default message will be used. current_speed: (down, up)
+         down_speed: download speed, up_speed: upload speed"""
 
-        self.__net_speed = speed
+        self.__net_speed = current_speed
         self.__promised_down = promised_down_speed
         self.__promised_up = promised_up_speed
         self.__msg = tweet

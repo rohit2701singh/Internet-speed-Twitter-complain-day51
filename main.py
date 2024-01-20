@@ -12,9 +12,9 @@ twitter = TwitterFile(
 )
 
 twitter.internet_speed_complaint(
-    speed=(12, 15),
+    current_speed=(12, 15),
     promised_up_speed=30,
-    promised_down_speed=50,
+    promised_down_speed=speed,
     # tweet="this is my customised tweet"
 )
 
